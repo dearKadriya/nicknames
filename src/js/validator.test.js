@@ -47,3 +47,9 @@ test('Проверка на содержание в конце символов 
   const result = test.validateUsername('1ee-');
   expect(result).toBe(false);
 });
+
+test('Проверка на содержание букв чередующихся тире', () => {
+  const test = new Validator();
+  const result = test.validateUsername('w-w-w');
+  expect(result).toBe(true);
+});
